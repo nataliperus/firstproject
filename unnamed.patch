@@ -1,0 +1,189 @@
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(date 1540336919637)
++++ .idea/compiler.xml	(date 1540336919637)
+@@ -0,0 +1,23 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <option name="DEFAULT_COMPILER" value="Javac" />
++    <resourceExtensions />
++    <wildcardResourcePatterns>
++      <entry name="!?*.java" />
++      <entry name="!?*.form" />
++      <entry name="!?*.class" />
++      <entry name="!?*.groovy" />
++      <entry name="!?*.scala" />
++      <entry name="!?*.flex" />
++      <entry name="!?*.kt" />
++      <entry name="!?*.clj" />
++    </wildcardResourcePatterns>
++    <annotationProcessing>
++      <profile default="true" name="Default" enabled="false">
++        <processorPath useClasspath="true" />
++      </profile>
++    </annotationProcessing>
++  </component>
++</project>
++
+Index: .idea/description.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/description.html	(date 1540336919652)
++++ .idea/description.html	(date 1540336919652)
+@@ -0,0 +1,1 @@
++<html>Simple <b>Java</b> application that includes a class with <code>main()</code> method</html>
+\ No newline at end of file
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Main.java	(date 1540337489925)
++++ src/Main.java	(date 1540337489925)
+@@ -0,0 +1,17 @@
++import java.util.Calendar;
++
++public class Main {
++
++    public static void main(String[] args) {
++        int[] numbers = {0,2,5,220,221,77,500,13,300,6,500,7};
++        int day = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
++        DaysToWeekend daysToWeekend = new DaysToWeekend();
++        System.out.println("Count of numbers in a range = "+ MyMath.myMath(2,222,numbers));
++        if (day==Calendar.SATURDAY){
++            System.out.println("Последний день");
++        }
++        else {
++            System.out.println("До конца недели осталось: "+ daysToWeekend.getDaysToEndOfWeek(day));
++        }
++    }
++}
+Index: src/MyMath.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/MyMath.java	(date 1540337489940)
++++ src/MyMath.java	(date 1540337489940)
+@@ -0,0 +1,10 @@
++public class MyMath {
++    public static int myMath(int c, int d, int[] a) {
++        int rez = 0;
++        for (int i=0; i< a.length; i++){
++            if (a[i]>=c && a[i]<=d)
++            {rez = rez+1;}
++        }
++        return rez;
++    }
++}
+Index: src/DaysToWeekend.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/DaysToWeekend.java	(date 1540337489893)
++++ src/DaysToWeekend.java	(date 1540337489893)
+@@ -0,0 +1,11 @@
++class DaysToWeekend {
++    public String getDaysToEndOfWeek( int day){
++        String rezult ="";
++        final String[] dayList ={"Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"};
++        for (int k = day; k < dayList.length; k++) {
++            rezult += dayList[k]+ " , ";
++        }
++         rezult +=  dayList[0];
++         return rezult ;
++    }
++}
+Index: com.nataliperus.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- com.nataliperus.iml	(date 1540336919668)
++++ com.nataliperus.iml	(date 1540336919668)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
++
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(date 1540336919934)
++++ .idea/misc.xml	(date 1540336919934)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="EntryPointsManager">
++    <entry_points version="2.0" />
++  </component>
++  <component name="ProjectKey">
++    <option name="state" value="project://63537948-39a4-48a0-9c97-34259a0fa913" />
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(date 1540337489737)
++++ .idea/modules.xml	(date 1540337489737)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/com.nataliperus.iml" filepath="$PROJECT_DIR$/com.nataliperus.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1540337573528)
++++ .idea/vcs.xml	(date 1540337573528)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/encodings.xml	(date 1540336919652)
++++ .idea/encodings.xml	(date 1540336919652)
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
++</project>
++
