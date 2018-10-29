@@ -28,6 +28,7 @@ public class Animal {
         DEAD
     }
     Status status = Status.AWAKE;
+    String name = "";
     public void talk() {}
     final public void sleep(){
         this.status = Status.SLEEPING;
@@ -40,6 +41,11 @@ public class Animal {
     }
 
     public boolean equals(Animal b){
-        return this.getClass() == b.getClass();
+        return (this.getClass() == b.getClass() && String.valueOf(this.name) == String.valueOf(b.name));
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }

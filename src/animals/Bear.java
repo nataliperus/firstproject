@@ -1,12 +1,12 @@
 package animals;
 
-public class Cat extends Animal {
+public class Bear extends Animal{
     public String to_String(){
-        return "Cat";
+        return "Bear " + this.name;
     }
     @Override
     public void talk(){
         if ( this.status == Status.AWAKE)
-            System.out.println("Miau");
+            System.out.println("Rrrr");
     }
 }

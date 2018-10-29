@@ -1,7 +1,7 @@
 package animals;
 
 public class Dog extends Animal {
-    String name;
+
     public String to_String(){
         return "Dog";
     }

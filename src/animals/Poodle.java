@@ -1,5 +1,5 @@
 package animals;
-
+@Domesticated("Domesticated")
 public class Poodle extends Dog {
 
     public Poodle(String name){

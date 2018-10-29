@@ -1,8 +1,8 @@
 package animals;
 
-public class Cat extends Animal {
+public class BobCat extends Cat {
     public String to_String(){
-        return "Cat";
+        return "BobCat";
     }
     @Override
     public void talk(){
