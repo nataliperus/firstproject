@@ -14,7 +14,7 @@ public class Main {
         DaysToWeekend daysToWeekend = new DaysToWeekend();
         System.out.println("Numers-in-Range--------------------------------------------");
         System.out.println("Count of numbers in a range = "+ myMath(2,222,numbers));
-        System.out.println("Days-to-End-Week-------------------------------------------");
+        System.out.println("Days-to-End-of-Week----------------------------------------");
         if (day==Calendar.SUNDAY){
             System.out.println("Последний день");
         }
@@ -49,12 +49,13 @@ public class Main {
         System.out.println("Is dog3 equal to dog1? "+dog3.equals(dog1));
 
         Bear bear = new Bear();
+        System.out.println(bear.to_String());
         bear.talk();
         Cow cow = new Cow("Buryonka");
         System.out.println(cow.to_String());
         cow.talk();
-        Domesticated[] annototations =cow.getClass().getAnnotationsByType(Domesticated.class);
-        for (Domesticated domesticated: annototations) {
+        Domesticated[] annotations =cow.getClass().getAnnotationsByType(Domesticated.class);
+        for (Domesticated domesticated: annotations) {
             System.out.println(cow.getClass().getName() + " is "+ (domesticated.value().isEmpty()? "not domesticated":"domesticated"));
         }
     }

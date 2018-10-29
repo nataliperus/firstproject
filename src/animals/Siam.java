@@ -1,5 +1,5 @@
 package animals;
-@Domesticated("Domesticated")
+@Domesticated
 public class Siam extends Cat{
     public Siam(String name){
         this.name = name;
