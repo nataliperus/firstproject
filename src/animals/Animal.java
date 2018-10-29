@@ -20,7 +20,7 @@ DEAD } вместо пары флагов boolean, оставить ту же ф
  */
 package animals;
 
-public class Animal {
+public abstract class Animal {
 
     enum Status {
         SLEEPING,

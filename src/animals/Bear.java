@@ -2,7 +2,7 @@ package animals;
 
 public class Bear extends Animal{
     public String to_String(){
-        return "Bear " + this.name;
+        return "Bear ";
     }
     @Override
     public void talk(){

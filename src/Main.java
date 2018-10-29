@@ -1,13 +1,9 @@
-//import com.sun.java.util.jar.pack.Package;
 import myMath.*;
 import animals.*;
-
-//import sun.awt.geom.AreaOp;
 
 import java.lang.reflect.Method;
 import java.util.Calendar;
 
-import static java.util.Objects.isNull;
 import static myMath.MyMath.myMath;
 
 public class Main {
@@ -59,7 +55,6 @@ public class Main {
         cow.talk();
         Domesticated[] annototations =cow.getClass().getAnnotationsByType(Domesticated.class);
         for (Domesticated domesticated: annototations) {
-            System.out.println(domesticated.annotationType());
             System.out.println(cow.getClass().getName() + " is "+ (domesticated.value().isEmpty()? "not domesticated":"domesticated"));
         }
     }
